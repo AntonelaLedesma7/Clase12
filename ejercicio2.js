@@ -2,14 +2,14 @@
 
 const deleteLastThreeElements = (array) => { 
     if (array.length < 5 ){
-        return console.log("ERROR")
+        console.log("ERROR! : El array debe tener 5 o más elementos")
+        return
     }
-    else if (array.length >= 5){
-        array.pop()
-        array.pop()
-        array.pop()
-        return console.log(array)
-    }
+
+    array.pop()
+    array.pop()
+    array.pop()
+    console.log(array)
 }
 
 const array1 = [ 1, 3, 5, 7, 9, 23, 28]
