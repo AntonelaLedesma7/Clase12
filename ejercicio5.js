@@ -1,8 +1,11 @@
 //Hay un arreglo con varios números donde todos son iguales excepto uno. Haga una función que encuentre qué número es el distinto. findUniq([1,1,1,1,2,1,1,1]) ==> return (2)
 
-const findUniq = array => {
-    const number = array.find(number => number != 1)
-    return console.log(number)
-}
+const findUniq = (arrayOfNumbers) => {
+  for(let i = 0; i < arrayOfNumbers.length; i++){
+    if (arrayOfNumbers[i] !== arrayOfNumbers[i+1])
+    return arrayOfNumbers[i+1]
+  }
+};
 
-findUniq([1,1,1,1,2,1,1,1])
+const numbers = [7, 7, 7, 7, 7, 9, 7, 7, 7];
+console.log(findUniq(numbers));
